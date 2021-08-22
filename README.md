@@ -4,24 +4,25 @@
 
 Esse programa tem a funcionalidade de criar uma imagem a partir de instruções dadas por um arquivo “.txt”. As instruções são dadas pelas funções:
 
-DRAW_LINE: desenha uma linha a partir de 2 pontos cartesianos.
 
-SET_PIXEL: função que seleciona um pixel a ser colorido.
++ DRAW_LINE: desenha uma linha a partir de 2 pontos cartesianos.
 
-SET_COLOR: aplica uma cor partir do RGB (R de red, G de green, B de blue: vermelho, verde e azul em inglês respectivamente).
++ SET_PIXEL: função que seleciona um pixel a ser colorido.
 
-KOCH_CURVE: aplica a curva de Koch para uma linha passada como parâmetro.
++ SET_COLOR: aplica uma cor partir do RGB (R de red, G de green, B de blue: vermelho, verde e azul em inglês respectivamente).
 
-REGION_FILL: colore uma região a partir das coordenadas de um ponto passado como parâmetro.
++ KOCH_CURVE: aplica a curva de Koch para uma linha passada como parâmetro.
 
++ REGION_FILL: colore uma região a partir das coordenadas de um ponto passado como parâmetro.
 
-OBS: o plano cartesiano da imagem tem seu x iniciado no 0 e crecente para direita até LARGURA-1 e o y inicial no 0 e crescente para baixo até ALTURA-1.
+*OBS:* o plano cartesiano da imagem tem seu x iniciado no 0 e crecente para direita até LARGURA-1 e o y inicial no 0 e crescente para baixo até ALTURA-1.
 
 
 
 A execução desse programa é dada pelos comandos:
 
-```javac Main.java                         					(Para a complilar)``` 
+```javac Main.java                         					(Para a complilar)```
+
 ```java Main [Nome do Arquivo].txt [Nome da imagem].png     (Para executar)```
 
 OBS: vale ressaltar que por ser um programa que utiliza recursividade,há a possibilidade de _StackOverflow_, para contornar pode-se executar a seguinte linha:
@@ -38,15 +39,15 @@ O arquivo “.txt” deve ser formatado de modo a especificar as dimensões da i
 
 As funções passadas devem conter seus respectivos parâmetros:
 
-DRAW_LINE recebe 4 inteiros como parâmetros para criar a linha, sendo eles um x e um y de um ponto inicial e outro x e um y ponto final.
++ DRAW_LINE recebe 4 inteiros como parâmetros para criar a linha, sendo eles um x e um y de um ponto inicial e outro x e um y ponto final.
 
-SET_PIXEL recebe 2 inteiros como parâmetro sendo eles um x e um y, referentes ao plano cartesiano da imagem.
++ SET_PIXEL recebe 2 inteiros como parâmetro sendo eles um x e um y, referentes ao plano cartesiano da imagem.
 
-SET_COLOR recebe 3 inteiros como parâmetro referente a RGB com valor máximo de 255 (acima disso é considerado 255).
++ SET_COLOR recebe 3 inteiros como parâmetro referente a RGB com valor máximo de 255 (acima disso é considerado 255).
 
-KOCH_CURVE recebe 5 inteiros como parâmetro sendo eles um (x,y) inicial e (x,y) final e ainda um limiar que define a distancia minima que as linhas formadas pela curva terão.
++ KOCH_CURVE recebe 5 inteiros como parâmetro sendo eles um (x,y) inicial e (x,y) final e ainda um limiar que define a distancia minima que as linhas formadas pela curva terão.
 
-REGION_FILL recebe 2 paramentros sendo esse referentes ao ponto de partida para colorir de um x e um y de um ponto no plano cartesiano da imagem.
++ REGION_FILL recebe 2 paramentros sendo esse referentes ao ponto de partida para colorir de um x e um y de um ponto no plano cartesiano da imagem.
 
 
 Sendo assim, as funcionalidade devem ter essa formatação no arquivo ".txt" para serem execultadas corretamente:
